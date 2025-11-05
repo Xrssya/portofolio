@@ -146,27 +146,18 @@ body {
     object-fit: cover;
 }
 
-/* Contact Form */
-.contact-form-container {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    background: rgba(15, 15, 15, 0.6);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(138, 112, 255, 0.15);
-}
-
-/* Tambahkan style ini */
-.contact-section .section-title {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 3rem;
-}
-
 /* MAIN SECTIONS */
 section { padding: 5rem 0; }
 
-/* Responsive Fix for Tablets & HP */
+/* ✅ CONTACT TITLE NOW CENTER */
+#contact .section-title {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+/* ✅ RESPONSIVE TABLET + HP */
 @media (max-width: 900px) {
     .hero-content {
         flex-direction: column;
@@ -189,7 +180,7 @@ section { padding: 5rem 0; }
     }
 }
 
-/* Extra Responsive for Smaller Screens */
+/* Extra Responsive */
 @media (max-width: 768px) {
     .name { font-size: 3rem; }
     .tagline { font-size: 1.5rem; }
@@ -197,12 +188,13 @@ section { padding: 5rem 0; }
     .nav-link { padding: 0.8rem 1rem; font-size: 0.9rem; }
 }
 
+/* Extra HP kecil */
 @media (max-width: 480px) {
     .name { font-size: 2.5rem; }
     section { padding: 3rem 0; }
 }
 
-/* Nav mobile wrap */
+/* ✅ Nav wrap Mobile */
 @media(max-width: 600px) {
     .nav-menu {
         flex-wrap: wrap;
@@ -213,7 +205,7 @@ section { padding: 5rem 0; }
     .nav-link { padding: 0.5rem; font-size: 0.85rem; }
 }
 
-/* Restore Desktop Behavior Properly */
+/* ✅ Restore Desktop */
 @media (min-width: 901px) {
     .hero-content { flex-wrap: nowrap; }
     .hero-image {
