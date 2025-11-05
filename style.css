@@ -286,13 +286,6 @@ section {
     border: 1px solid rgba(138, 112, 255, 0.15);
 }
 
-/* Tambahkan style ini */
-.contact-section .section-title {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 3rem;
-}
-
 .form-group {
     margin-bottom: 1.2rem;
 }
