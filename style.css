@@ -172,7 +172,7 @@ body {
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
 }
 
@@ -180,12 +180,20 @@ body {
     background: rgba(15, 15, 15, 0.6);
     backdrop-filter: blur(12px);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 2.5rem 2rem; /* tambah top/bottom padding */
     flex: 1;
     min-width: 300px;
     max-width: 500px;
     border: 1px solid rgba(138, 112, 255, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Perbesar jarak antar item di list */
+.about-card li {
+    padding: 1rem 0; /* dari 0.8rem jadi 1rem */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: flex-start;
 }
 
 .about-card:hover {
@@ -229,14 +237,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .skill-category {
     background: rgba(15, 15, 15, 0.6);
     backdrop-filter: blur(12px);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 2.5rem 2rem; /* tambah padding atas/bawah */
     flex: 1;
     min-width: 280px;
     max-width: 350px;
