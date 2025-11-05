@@ -146,6 +146,23 @@ body {
     object-fit: cover;
 }
 
+/* Contact Form */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    background: rgba(15, 15, 15, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(138, 112, 255, 0.15);
+}
+
+/* Tambahkan style ini */
+.contact-section .section-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
 /* MAIN SECTIONS */
 section { padding: 5rem 0; }
 
