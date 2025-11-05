@@ -467,3 +467,40 @@ footer {
         width: 100px;
     }
 }
+
+/* ✅ Fix overflow layout mobile */
+.hero-content {
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* ✅ Nav auto-wrap biar tidak melebar */
+@media(max-width: 600px) {
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-brand {
+        font-size: 1.1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+}
