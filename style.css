@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 }
 
 :root {
@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: var(--black); /* ✅ Hitam solid, elegan */
+    background-color: var(--black);
     color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
@@ -83,15 +83,17 @@ body {
     margin-top: 70px;
 }
 
+/* ✅ Perbaikan: agar tidak melebar di mobile */
 .hero::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(138, 112, 255, 0.05) 0%, transparent 70%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 20%, rgba(138, 112, 255, 0.05) 0%, transparent 70%);
     z-index: -1;
+    pointer-events: none;
 }
 
 .hero-content {
@@ -403,6 +405,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
     .name {
         font-size: 3rem;
     }
@@ -418,6 +425,7 @@ footer {
     .about-card,
     .skill-category {
         min-width: 100%;
+        max-width: 100%;
     }
 
     .nav-menu {
@@ -425,7 +433,7 @@ footer {
     }
 
     .nav-link {
-        padding: 0.5rem;
+        padding: 0.8rem 1rem; /* ✅ lebih nyaman untuk touch */
         font-size: 0.9rem;
     }
 }
@@ -444,8 +452,11 @@ footer {
     }
 
     .hero-image {
-        flex: 0 0 220px;
-        height: 250px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        max-height: 300px;
     }
 
     .social-links {
