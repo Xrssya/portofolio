@@ -149,7 +149,15 @@ body {
 /* MAIN SECTIONS */
 section { padding: 5rem 0; }
 
-/* Responsive Fix for Tablets & HP */
+/* ✅ CONTACT TITLE NOW CENTER */
+#contact .section-title {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+/* ✅ RESPONSIVE TABLET + HP */
 @media (max-width: 900px) {
     .hero-content {
         flex-direction: column;
@@ -172,7 +180,7 @@ section { padding: 5rem 0; }
     }
 }
 
-/* Extra Responsive for Smaller Screens */
+/* Extra Responsive */
 @media (max-width: 768px) {
     .name { font-size: 3rem; }
     .tagline { font-size: 1.5rem; }
@@ -180,12 +188,13 @@ section { padding: 5rem 0; }
     .nav-link { padding: 0.8rem 1rem; font-size: 0.9rem; }
 }
 
+/* Extra HP kecil */
 @media (max-width: 480px) {
     .name { font-size: 2.5rem; }
     section { padding: 3rem 0; }
 }
 
-/* Nav mobile wrap */
+/* ✅ Nav wrap Mobile */
 @media(max-width: 600px) {
     .nav-menu {
         flex-wrap: wrap;
@@ -196,7 +205,7 @@ section { padding: 5rem 0; }
     .nav-link { padding: 0.5rem; font-size: 0.85rem; }
 }
 
-/* Restore Desktop Behavior Properly */
+/* ✅ Restore Desktop */
 @media (min-width: 901px) {
     .hero-content { flex-wrap: nowrap; }
     .hero-image {
@@ -205,4 +214,97 @@ section { padding: 5rem 0; }
         max-width: 280px;
         border-radius: 20px;
     }
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--purple-light);
+}
+
+/* ABOUT SECTION */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(138, 112, 255, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.about-card h3 {
+    color: var(--purple-light);
+    margin-bottom: 1rem;
+}
+
+.about-card ul {
+    list-style: none;
+}
+
+.about-card li {
+    margin-bottom: 0.6rem;
+    color: var(--gray);
+}
+
+/* SKILLS SECTION */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    color: var(--purple-light);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-item {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--purple-light);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* SOCIAL LINK STYLES */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(138, 112, 255, 0.25);
+    text-decoration: none;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    background: rgba(138, 112, 255, 0.2);
+}
+
+.social-icon {
+    font-size: 1.2rem;
 }
