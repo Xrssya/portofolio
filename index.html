@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rsya | Back-End Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Portofolio | Rasya</div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="name">rsya.js</h1>
+                    <p class="tagline">Membangun sistem Back-End yang kuat</p>
+                    <p class="intro">
+                        Hai! Saya Ras Laffan Adi Qatarindo, seorang pelajar dari sekolah
+                        SMK Negeri 1 Pasuruan dari jurusan Rekayasa Perangkat Lunak.
+                        Saya memiliki minat yang besar dalam pengembangan Back-End dan
+                        bersemangat untuk menciptakan solusi yang efisien dan skalabel.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="2.jpeg" alt="Ras Laffan Adi Qatarindo" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3><i class="fas fa-heart"></i> Minat & Tujuan</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Membangun arsitektur mikroservis</li>
+                        <li><i class="fas fa-check-circle"></i> Mengoptimalkan kinerja basis data</li>
+                        <li><i class="fas fa-check-circle"></i> Menerapkan sistem otentikasi yang aman</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h3><i class="fas fa-code"></i> Saat ini Belajar</h3>
+                    <ul>
+                        <li><i class="fas fa-arrow-right"></i> Python</li>
+                        <li><i class="fas fa-arrow-right"></i> Laravel</li>
+                        <li><i class="fas fa-arrow-right"></i> JavaScript</li>
+                        <li><i class="fas fa-arrow-right"></i> PHP</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h3><i class="fas fa-star"></i> Fun Facts tentang aku</h3>
+                    <ul>
+                        <li><i class="fas fa-mug-hot"></i> Suka nonton anime & drakor</li>
+                        <li><i class="fas fa-gamepad"></i> Main game untuk menghilangkan stres</li>
+                        <li><i class="fas fa-music"></i> Penyanyi favorit: Rex Orange County</li>
+                        <li><i class="fas fa-camera"></i> Suka fotografi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Keahlian Teknis</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Back-End</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">PHP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">Laravel</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Basics</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="social-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+
+            <!-- Social Links (keep below form) -->
+            <div class="social-links" style="margin-top: 3rem;">
+                <a href="mailto:qatarindorasya@gmail.com" class="social-link">
+                    <div class="social-icon"><i class="fas fa-envelope"></i></div>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/Xrssya" class="social-link">
+                    <div class="social-icon"><i class="fab fa-github"></i></div>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://instagram.com/rsya.js" class="social-link">
+                    <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 rsya. All rights reserved.</p>
+            <p class="tech-credit">Built with HTML, CSS, and pure JavaScript | Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
